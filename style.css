@@ -463,21 +463,23 @@ body {
 }
 
 .copy-instruction {
+    display: none;
     font-size: 0.78rem;
-    color: rgba(255, 255, 255, 0);
+    color: rgba(255, 255, 255, 0.65);
     font-weight: 400;
-    margin-top: 0;
-    max-height: 0;
-    overflow: hidden;
-    transition: all 0.4s ease;
+    margin-top: 0.6rem;
     text-align: center;
     line-height: 1.4;
+    animation: fadeInInstruction 0.4s ease forwards;
 }
 
 .copy-instruction.visible {
-    color: rgba(255, 255, 255, 0.65);
-    margin-top: 0.6rem;
-    max-height: 3rem;
+    display: block;
+}
+
+@keyframes fadeInInstruction {
+    from { opacity: 0; transform: translateY(-4px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 /* Browser Hint */
