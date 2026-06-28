@@ -84,15 +84,18 @@
             <div class="spinner"></div>
             <p id="overlay-status">Redirecionando para o WhatsApp...</p>
             <div id="fallback-container">
-                <p class="fallback-text">Não abriu automaticamente?</p>
+                <p class="fallback-text">Não abriu automaticamente?<br><span class="fallback-subtext">Tente uma das opções abaixo:</span></p>
                 <a href="#" id="fallback-button" class="btn-whatsapp" target="_blank" rel="noopener noreferrer">
                     <i class="ph-fill ph-whatsapp-logo"></i>
                     ABRIR NO WHATSAPP
                 </a>
-                <button id="copy-link-button" class="btn-copy">
-                    <i class="ph ph-copy"></i>
-                    COPIAR LINK DO GRUPO
-                </button>
+                <div class="copy-section">
+                    <button id="copy-link-button" class="btn-copy">
+                        <i class="ph ph-copy"></i>
+                        COPIAR LINK DO GRUPO
+                    </button>
+                    <p id="copy-instruction" class="copy-instruction">Cole o link no seu navegador (Chrome, Safari...)</p>
+                </div>
                 <p id="browser-hint" class="browser-hint"></p>
             </div>
         </div>

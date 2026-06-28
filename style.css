@@ -445,6 +445,41 @@ body {
     font-size: 1.1rem;
 }
 
+/* Fallback Subtext */
+.fallback-subtext {
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.55);
+    font-weight: 400;
+    display: inline-block;
+    margin-top: 0.2rem;
+}
+
+/* Copy Section */
+.copy-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+}
+
+.copy-instruction {
+    font-size: 0.78rem;
+    color: rgba(255, 255, 255, 0);
+    font-weight: 400;
+    margin-top: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    text-align: center;
+    line-height: 1.4;
+}
+
+.copy-instruction.visible {
+    color: rgba(255, 255, 255, 0.65);
+    margin-top: 0.6rem;
+    max-height: 3rem;
+}
+
 /* Browser Hint */
 .browser-hint {
     display: none;

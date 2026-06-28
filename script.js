@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const closeButton = document.getElementById('overlay-close');
     const overlayStatus = document.getElementById('overlay-status');
     const browserHint = document.getElementById('browser-hint');
+    const copyInstruction = document.getElementById('copy-instruction');
 
     // === Detecção de Ambiente ===
     const ua = navigator.userAgent || navigator.vendor || window.opera;
@@ -63,6 +64,9 @@ document.addEventListener('DOMContentLoaded', () => {
             }
             if (browserHint) {
                 browserHint.classList.remove('visible');
+            }
+            if (copyInstruction) {
+                copyInstruction.classList.remove('visible');
             }
         }, 300);
     };
@@ -134,6 +138,12 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!copyButton) return;
         copyButton.innerHTML = '✅ Link copiado!';
         copyButton.classList.add('copied');
+
+        // Mostra instrução contextual
+        if (copyInstruction) {
+            copyInstruction.classList.add('visible');
+        }
+
         setTimeout(() => {
             copyButton.innerHTML = '<i class="ph ph-copy"></i> COPIAR LINK DO GRUPO';
             copyButton.classList.remove('copied');
