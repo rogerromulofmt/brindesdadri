@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description"
+        content="Brindes grátis das maiores marcas do Brasil! 🎁 Ofertas imperdíveis, cupons e mimos. 🛍️">
+    <meta name="theme-color" content="#460a23">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="BRINDES DA DRI | Grupo VIP">
+    <meta property="og:description"
+        content="Brindes grátis das maiores marcas do Brasil! 🎁 Ofertas imperdíveis, cupons e mimos. 🛍️">
+    <meta property="og:image" content="http://brindesdadri.rogermotta.com.br/img/avatar.jpeg">
+    <meta property="og:url" content="http://brindesdadri.rogermotta.com.br/">
+    <meta property="og:type" content="website">
+    <link rel="canonical" href="http://brindesdadri.rogermotta.com.br/">
+
+    <title>BRINDES DA DRI | Links</title>
+    <link rel="icon" type="image/jpeg" href="img/avatar.jpeg">
+    <link rel="apple-touch-icon" href="img/avatar.jpeg">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Phosphor Icons (for the TikTok Icon) -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+
+<body>
+    <div class="background-animation">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+    </div>
+
+    <main class="container">
+        <!-- Profile Header -->
+        <header class="profile-header glass-panel fade-in-up">
+            <div class="avatar-container">
+                <img src="img/avatar.jpeg" alt="Avatar da Dri" class="avatar">
+                <div class="status-indicator"></div>
+            </div>
+            <h1 class="profile-name">BRINDES DA DRI</h1>
+            <p class="profile-bio">
+                Brindes grátis das maiores marcas do Brasil! 🎁<br>
+                Ofertas imperdíveis, cupons e mimos. 🛍️
+            </p>
+
+            <div class="social-links">
+                <a href="https://tiktok.com/@brindesdadri" target="_blank" rel="noopener noreferrer" class="social-icon"
+                    aria-label="TikTok">
+                    <i class="ph-fill ph-tiktok-logo"></i>
+                </a>
+            </div>
+        </header>
+
+        <!-- Links Section -->
+        <section class="links-container fade-in-up delay-1">
+            <a href="#" id="whatsapp-link" class="link-card pulse-effect" data-group="L6ZDhaKV8bLFxBbmUqHJKn">
+                <div class="link-card-inner">
+                    <div class="link-thumbnail">
+                        <img src="img/grupo-whatsapp.jpeg" alt="Grupo WhatsApp">
+                    </div>
+                    <div class="link-content">
+                        <h2 class="link-title">ENTRE NO GRUPO AQUI! 👈🏻🎁🛍️</h2>
+                        <p class="link-subtitle">Comunidade WhatsApp • Gratuito para participar</p>
+                    </div>
+                    <div class="link-icon">
+                        <i class="ph ph-caret-right"></i>
+                    </div>
+                </div>
+            </a>
+        </section>
+
+        <!-- Loading overlay for deep link transition -->
+        <div id="redirect-overlay" class="overlay hidden">
+            <button id="overlay-close" class="overlay-close" aria-label="Fechar">✕</button>
+            <div class="spinner"></div>
+            <p id="overlay-status">Redirecionando para o WhatsApp...</p>
+            <div id="fallback-container">
+                <p class="fallback-text">Não abriu automaticamente?</p>
+                <a href="#" id="fallback-button" class="btn-whatsapp" target="_blank" rel="noopener noreferrer">
+                    <i class="ph-fill ph-whatsapp-logo"></i>
+                    ABRIR NO WHATSAPP
+                </a>
+                <button id="copy-link-button" class="btn-copy">
+                    <i class="ph ph-copy"></i>
+                    COPIAR LINK DO GRUPO
+                </button>
+                <p id="browser-hint" class="browser-hint"></p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+</body>
+
+</html>
