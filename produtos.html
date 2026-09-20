@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description"
+        content="Achadinhos e produtos testados e aprovados pela Dri. As melhores promoções e cupons para você.">
+    <meta name="theme-color" content="#460a23">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="PROMO DA DRI | Achadinhos">
+    <meta property="og:description"
+        content="Achadinhos e produtos testados e aprovados pela Dri. As melhores promoções e cupons para você.">
+    <meta property="og:image" content="http://brindesdadri.rogermotta.com.br/img/avatar.jpeg">
+    <meta property="og:type" content="website">
+
+    <title>PROMO DA DRI | Produtos</title>
+    <link rel="icon" type="image/jpeg" href="img/avatar.jpeg">
+    <link rel="apple-touch-icon" href="img/avatar.jpeg">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+
+<body>
+    <div class="background-animation">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+    </div>
+
+    <main class="container produtos-container">
+        <!-- Back Button & Header -->
+        <header class="products-header fade-in-up">
+            <a href="index.html" class="back-button">
+                <i class="ph ph-arrow-left"></i>
+                Voltar
+            </a>
+            <div class="header-content">
+                <img src="img/avatar.jpeg" alt="Avatar da Dri" class="avatar-small">
+                <div>
+                    <h1>Achadinhos da Dri</h1>
+                    <p class="products-subtitle">Os melhores produtos que testei e recomendo! ✨</p>
+                </div>
+            </div>
+        </header>
+
+        <!-- Products Grid -->
+        <section id="produtos-grid" class="produtos-grid fade-in-up delay-1">
+            <!-- Loader -->
+            <div class="loading-products">
+                <div class="spinner"></div>
+                <p style="color: rgba(255,255,255,0.7); font-size: 0.9rem;">Buscando as melhores ofertas...</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Custom JavaScript -->
+    <script src="produtos.js"></script>
+</body>
+
+</html>
