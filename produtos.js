@@ -44,12 +44,9 @@ document.addEventListener('DOMContentLoaded', () => {
             card.rel = 'noopener noreferrer';
             card.className = `product-card fade-in-up ${delayClass}`;
 
-            // Fallback de imagem caso dê erro
-            const handleImageError = `this.onerror=null;this.src='data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200"><rect width="200" height="200" fill="%23ffffff20"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="sans-serif" font-size="14" fill="%23ffffff80">Sem Imagem</text></svg>';`;
-
             card.innerHTML = `
                 <div class="product-image-container">
-                    <img src="${produto.imagem}" alt="${produto.nome}" loading="lazy" onerror="${handleImageError}">
+                    <img src="${produto.imagem}" alt="${produto.nome}" loading="lazy">
                 </div>
                 <div class="product-info">
                     <h3 class="product-title">${produto.nome}</h3>
