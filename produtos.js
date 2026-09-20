@@ -35,21 +35,32 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         produtos.forEach((produto, index) => {
+            // Função simples para sanitizar HTML (Prevenção XSS)
+            const escapeHTML = (str) => {
+                const p = document.createElement("p");
+                p.appendChild(document.createTextNode(str));
+                return p.innerHTML;
+            };
+
+            const nomeSeguro = escapeHTML(produto.nome);
+            const imagemSegura = encodeURI(produto.imagem); // links também podem conter XSS via javascript:
+            const linkSeguro = encodeURI(produto.link);
+
             // Animação com delay em cascata
             const delayClass = `delay-${Math.min((index % 4) + 1, 4)}`; // Classes delay-1 a delay-4 disponíveis no CSS
             
             const card = document.createElement('a');
-            card.href = produto.link;
+            card.href = linkSeguro;
             card.target = '_blank';
             card.rel = 'noopener noreferrer';
             card.className = `product-card fade-in-up ${delayClass}`;
 
             card.innerHTML = `
                 <div class="product-image-container">
-                    <img src="${produto.imagem}" alt="${produto.nome}" loading="lazy" onerror="this.onerror=null; this.src='https://placehold.co/400x400/2B0515/FFFFFF/png?text=Sem+Imagem'">
+                    <img src="${imagemSegura}" alt="${nomeSeguro}" loading="lazy" onerror="this.onerror=null; this.src='https://placehold.co/400x400/2B0515/FFFFFF/png?text=Sem+Imagem'">
                 </div>
                 <div class="product-info">
-                    <h3 class="product-title">${produto.nome}</h3>
+                    <h3 class="product-title">${nomeSeguro}</h3>
                     <div style="flex-grow: 1;"></div>
                     <div class="product-button">
                         Ver produto <i class="ph ph-arrow-right"></i>
