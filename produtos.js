@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             card.innerHTML = `
                 <div class="product-image-container">
-                    <img src="${produto.imagem}" alt="${produto.nome}" loading="lazy">
+                    <img src="${produto.imagem}" alt="${produto.nome}" loading="lazy" onerror="this.onerror=null; this.src='https://placehold.co/400x400/2B0515/FFFFFF/png?text=Sem+Imagem'">
                 </div>
                 <div class="product-info">
                     <h3 class="product-title">${produto.nome}</h3>
