@@ -1,42 +1,8 @@
 [
   {
     "id": 1,
-    "nome": "Garrafa Térmica Stanley Quencher 1.2L",
-    "imagem": "https://m.media-amazon.com/images/I/51r9Wn+UuQL._AC_SX679_.jpg",
-    "link": "https://amzn.to/exemplo1",
-    "preco": "R$ 250,00",
-    "precoOriginal": "R$ 315,00",
-    "desconto": "20% OFF",
-    "tag": "Mais Vendido"
-  },
-  {
-    "id": 2,
-    "nome": "Mop Giratório Flash Limp",
-    "imagem": "https://m.media-amazon.com/images/I/61KxZ-Xv2LL._AC_SX679_.jpg",
-    "link": "https://amzn.to/exemplo2",
-    "preco": "R$ 89,90",
-    "precoOriginal": "R$ 139,90",
-    "desconto": "35% OFF",
-    "tag": "Oferta Relâmpago"
-  },
-  {
-    "id": 3,
-    "nome": "Fritadeira Air Fryer Mondial 4L",
-    "imagem": "https://m.media-amazon.com/images/I/71R2nJ3Kj2L._AC_SX679_.jpg",
-    "link": "https://amzn.to/exemplo3",
-    "preco": "R$ 299,00",
-    "precoOriginal": "R$ 499,00",
-    "desconto": "40% OFF",
-    "tag": ""
-  },
-  {
-    "id": 4,
-    "nome": "Kit Potes Herméticos Electrolux",
-    "imagem": "https://m.media-amazon.com/images/I/61Jc7S-A4CL._AC_SX679_.jpg",
-    "link": "https://amzn.to/exemplo4",
-    "preco": "R$ 119,90",
-    "precoOriginal": "",
-    "desconto": "",
-    "tag": "Recomendado"
+    "nome": "Philco Multiprocessador, Pmp1600p, 1700W, Preto, 127v",
+    "imagem": "https://m.media-amazon.com/images/I/51pDaHGEVGL._AC_SL1000_.jpg",
+    "link": "https://link.amazon/B0exr7Wbd"
   }
 ]
