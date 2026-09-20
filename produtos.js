@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     const produtosGrid = document.getElementById('produtos-grid');
+    let allProducts = []; // Armazena a lista completa para o filtro
 
     // Fetch JSON data com timestamp para evitar cache no GitHub Pages durante a edição
     fetch(`data/produtos.json?t=${new Date().getTime()}`)
@@ -10,7 +11,9 @@ document.addEventListener('DOMContentLoaded', () => {
             return response.json();
         })
         .then(produtos => {
+            allProducts = produtos;
             renderProdutos(produtos);
+            setupSearch();
         })
         .catch(error => {
             console.error('Erro:', error);
@@ -23,13 +26,29 @@ document.addEventListener('DOMContentLoaded', () => {
                 </div>`;
         });
 
+    function setupSearch() {
+        const searchInput = document.getElementById('searchInput');
+        if (!searchInput) return;
+
+        searchInput.addEventListener('input', (e) => {
+            const termo = e.target.value.toLowerCase();
+            const filtrados = allProducts.filter(p => p.nome.toLowerCase().includes(termo));
+            renderProdutos(filtrados);
+        });
+    }
+
     function renderProdutos(produtos) {
         produtosGrid.innerHTML = ''; // Clear loading
 
         if (produtos.length === 0) {
+            const termo = document.getElementById('searchInput')?.value || '';
+            const msg = termo 
+                ? `Nenhum produto encontrado para "<b>${termo}</b>"` 
+                : 'Nenhuma oferta disponível no momento. Volte em breve!';
+                
             produtosGrid.innerHTML = `
                 <div style="text-align: center; padding: 2rem; width: 100%; grid-column: 1 / -1;">
-                    <p style="color: rgba(255,255,255,0.7); font-size: 0.95rem;">Nenhuma oferta disponível no momento. Volte em breve!</p>
+                    <p style="color: rgba(255,255,255,0.7); font-size: 0.95rem;">${msg}</p>
                 </div>`;
             return;
         }
