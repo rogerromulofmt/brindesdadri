@@ -44,35 +44,18 @@ document.addEventListener('DOMContentLoaded', () => {
             card.rel = 'noopener noreferrer';
             card.className = `product-card fade-in-up ${delayClass}`;
 
-            // Html interno do card
-            let tagHtml = '';
-            if (produto.tag) {
-                tagHtml = `<span class="product-tag">${produto.tag}</span>`;
-            } else if (produto.desconto) {
-                tagHtml = `<span class="product-tag discount">${produto.desconto}</span>`;
-            }
-
-            let precoAntigoHtml = '';
-            if (produto.precoOriginal) {
-                precoAntigoHtml = `<span class="preco-antigo">${produto.precoOriginal}</span>`;
-            }
-
             // Fallback de imagem caso dê erro
             const handleImageError = `this.onerror=null;this.src='data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200"><rect width="200" height="200" fill="%23ffffff20"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="sans-serif" font-size="14" fill="%23ffffff80">Sem Imagem</text></svg>';`;
 
             card.innerHTML = `
                 <div class="product-image-container">
                     <img src="${produto.imagem}" alt="${produto.nome}" loading="lazy" onerror="${handleImageError}">
-                    ${tagHtml}
                 </div>
                 <div class="product-info">
                     <h3 class="product-title">${produto.nome}</h3>
-                    <div class="product-price-container">
-                        ${precoAntigoHtml}
-                        <span class="preco-atual">${produto.preco}</span>
-                    </div>
+                    <div style="flex-grow: 1;"></div>
                     <div class="product-button">
-                        Ver Oferta <i class="ph ph-shopping-cart"></i>
+                        Ver produto <i class="ph ph-arrow-right"></i>
                     </div>
                 </div>
             `;
