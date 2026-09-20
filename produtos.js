@@ -51,8 +51,6 @@ document.addEventListener('DOMContentLoaded', () => {
             
             const card = document.createElement('a');
             card.href = linkSeguro;
-            card.target = '_blank';
-            card.rel = 'noopener noreferrer';
             card.className = `product-card fade-in-up ${delayClass}`;
 
             card.innerHTML = `
