@@ -1,5 +1,12 @@
 [
   {
+    "id": 1789916069511,
+    "nome": "PANIFICADORA 19 PROGRAMAS GALLANT 600W",
+    "imagem": "https://lojawebcontinental.vtexassets.com/arquivos/ids/71044160-1600-1600?v=639089214538400000&width=1600&height=1600&aspect=true",
+    "link": "https://www.webcontinental.com.br/?utm_medium=dri.bsoares&utm_campaign=inbazz",
+    "cupom": "DRI10"
+  },
+  {
     "id": 1791649010401,
     "nome": "Bowls de Inox Electrolux com Tampa",
     "imagem": "https://down-br.img.susercontent.com/file/sg-11134201-7ravq-ma39e49pvz1o79.webp",
@@ -94,12 +101,5 @@
     "nome": "Philco Multiprocessador, Pmp1600p, 1700W, Preto, 127v",
     "imagem": "https://m.media-amazon.com/images/I/51pDaHGEVGL._AC_SL1000_.jpg",
     "link": "https://link.amazon/B0exr7Wbd"
-  },
-  {
-    "id": 1789916069511,
-    "nome": "PANIFICADORA 19 PROGRAMAS GALLANT 600W",
-    "imagem": "https://lojawebcontinental.vtexassets.com/arquivos/ids/71044160-1600-1600?v=639089214538400000&width=1600&height=1600&aspect=true",
-    "link": "https://www.webcontinental.com.br/?utm_medium=dri.bsoares&utm_campaign=inbazz",
-    "cupom": "DRI10"
   }
 ]
